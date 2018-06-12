@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div ng-controller="MyController as ctrl">
+        <comment-list comments="ctrl.comments" on-delete='ctrl.handleDelete(comment)'></comment-list>
+
+        <div class="add-comment">
+            <input type="text" name="comment" ng-model="ctrl.comment" />
+            <button type="button" ng-click="ctrl.addComment(ctrl.comment)">Add Comment</button>
+        </div>
+
+        <section>
+           <pre> Available comments (in AngularJs) : {{ctrl.comments | json}}</pre>
+        </section>
+    </div>
+    <!-- <div id="reactRoot"></div> -->
+
+
+
+
+    <script src="node_modules/react/umd/react.development.js"></script>
+    <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+
+    <script src="dist/components/react/comment/SingleComment.js"></script>
+    <script src="dist/components/react/comment/CommentList.js"></script>
+    <script src="dist/components/angular/comment/comment.js"></script>
+    <script src="dist/app.js"></script>
+
+    <script id="__bs_script__">//<![CDATA[
+        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.4'><\/script>".replace("HOST", location.hostname));
+    //]]></script>
+
+</body>
+</html>
