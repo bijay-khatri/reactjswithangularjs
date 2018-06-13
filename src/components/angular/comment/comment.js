@@ -9,7 +9,7 @@ angular.module('comment', [])
 
             const renderReactComponent = function () {
                 const elem = $element[0];
-                ReactDOM.render(<CommentList comments={_this.comments} onDelete ={ testDelete }/>, elem);
+                ReactDOM.render(<CommentList comments={_this.data} onDelete ={ testDelete }/>, elem);
             };
 
             this.$onChanges = function () {
@@ -17,7 +17,7 @@ angular.module('comment', [])
             }
         }],
         bindings: {
-            comments: '<',
+            data: '<',
             onDelete: '&'
         }
     });

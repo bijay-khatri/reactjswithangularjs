@@ -9,7 +9,10 @@
 <body>
     
     <div ng-controller="MyController as ctrl">
-        <comment-list comments="ctrl.comments" on-delete='ctrl.handleDelete(comment)'></comment-list>
+        <comment-list 
+            data="ctrl.comments" 
+            on-delete='ctrl.handleDelete(comment)'>
+        </comment-list>
 
         <div class="add-comment">
             <input type="text" name="comment" ng-model="ctrl.comment" />

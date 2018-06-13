@@ -12,10 +12,11 @@ class SingleComment extends React.Component {
     }
 
     render() {
+        const containerStyle = { 'float': 'clear', marginBottom: '1rem','color': '#fff', backgroundColor: '#000', padding: '2rem' };
         return (
-        <div style = {{ 'float': 'clear', marginBottom: '1rem','color': '#fff', backgroundColor: '#000', padding: '2rem' }} > 
-           <div style = {{ float: 'left'}}> { this.props.comment.text } </div>
-           <div style ={{ float: 'right'}}> <button id = {this.props.comment.id } onClick= {this.deleteItem} type='button'> delete </button> </div>
+        <div style = { containerStyle } > 
+           <label> { this.props.comment.text } </label>
+           <button  id = {this.props.comment.id } onClick= {this.deleteItem} type='button'> delete </button> 
         </div>);
     }
 }
