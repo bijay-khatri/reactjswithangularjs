@@ -1,7 +1,3 @@
-console.log('hello world');
-
-const reactRoot = document.querySelector('#reactRoot');
-
 const comments = [{
     id: 1,
     text: 'comment one'
