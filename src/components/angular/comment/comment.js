@@ -1,7 +1,6 @@
 angular.module('comment', [])
     .component('commentList', {
-        template: `{{$ctrl.comments}}`,
-        controller: function ($element) {
+        controller: ['$element', function ($element) {
             var _this = this;
 
             const testDelete = function(comment) {
@@ -13,22 +12,10 @@ angular.module('comment', [])
                 ReactDOM.render(<CommentList comments={_this.comments} onDelete ={ testDelete }/>, elem);
             };
 
-            this.$postLink = function () {
+            this.$onChanges = function () {
                 renderReactComponent();
-            };
-
-            this.$onChanges = function (obj) {
-                if (!obj.comments.isFirstChange()) {
-                    renderReactComponent();
-                }
             }
-
-
-            
-
-
-
-        },
+        }],
         bindings: {
             comments: '<',
             onDelete: '&'
