@@ -1,5 +1,5 @@
 {
-  "name": "02",
+  "name": "reactjswithangularjs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,8 +7,8 @@
     "start": "lite-server",
     "transpile": "babel  src -d dist --watch --source-maps --presets=env,react"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["angularjs", "reactjs"],
+  "author": "Bijay Khatri",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.7.1",
